@@ -19,3 +19,9 @@ source activate comments
 jupyter notebook
 ```
 
+#### Git Large File Storage
+Because the comments dataset (data/comments.csv) exceeds Git's maximum file size of 100mb, it is stored using Git Large File Storage. To commit changes, you may need Git Large File Storage installed. Follow the instructions at [Git LFS](https://git-lfs.github.com/) to install Git LFS, e.g.
+```bash
+brew install git-lfs
+git lfs install
+```
