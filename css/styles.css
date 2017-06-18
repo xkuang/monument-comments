@@ -5,8 +5,17 @@ body {
 
 @media (min-width: 768px) {
     #navbar_links {
-
         float: right;
+    }
+
+    h1
+    {
+        padding-top: 60px;
+    }
+
+    .carousel-inner h1
+    {
+        padding-top: 0px !important;
     }
 }
 
