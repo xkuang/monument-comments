@@ -192,6 +192,9 @@
                         <a href="#findings">Findings</a>
                     </li>
                     <li>
+                        <a href="#stats">Stats</a>
+                    </li>
+                    <li>
                         <a href="#more">More information</a>
                     </li>
                 </ul>
@@ -259,8 +262,22 @@
 
             <div id="methodology">
                 <h1>#Methodology</h1>
-                <p class="lead">Marketing slug-line</p>
+                <p class="lead">Data Sets</p>
+                <ul>
+                    <li>Link to the comments</li>
+                    <li>Link to the labeled comments by other person.</li>
+                </ul>
+                <br>
+
+                <p class="lead">Methodology</p>
                 <p>What are the tools we used? What choices did we make? Describe our approach briefly.</p>
+                <br>
+                <p class="lead">Tools</p>
+                <ul>
+                    <li><b>Data cleaning:</b> Python 3, NumPy, SciPy, Scikit-Learn</li>
+                    <li><b>NLP:</b> Spacy.io, GenSim, NLTK</li>
+                    <li><b>Front-end:</b> BootStrap, d3js, d3-wordcloud, Chart.js</li>
+                </ul>
             </div>
             <hr>
 
@@ -404,36 +421,70 @@
                     }
                 </script>
 
+                <div id='wordCloud1' class="wordCloud">
+                    <div class="row">
+                        <p class="wordCloudLabel">Descriptive text here.</p>
+                        <div id='wordcloud1_sub1' class="wordCloud_subs col"></div>
+                        <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
+                        <script>
+                        d3.wordcloud("#wordcloud1_sub1")
+                            .size([500, 300]) // Let's set the parameter of width later!
+                            .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+                            .words(words1)
+                            .start();
+                        </script>
+                        <div id='wordcloud1_sub2' class="wordCloud_subs col"></div>
+
+                        <script>
+                            d3.wordcloud("#wordcloud1_sub2")
+                                .size([500, 300]) // Let's set the parameter of width later!
+                                .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+                                .words(words1)
+                                .start();
+                        </script>
+                    </div>
+                </div>
 
 
-                <div id='wordcloud1' class="wordCloud"></div>
-                <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
-                <script>
-                    d3.wordcloud("#wordcloud1")
-                        .size([1000, 300]) // Let's set the parameter of width later!
-                        .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
-                        .words(words1)
-                        .start();
-                </script>
+                <div class="row">
 
 
-                <div id='wordcloud2' class="wordCloud" style="display: none"></div>
-                <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
-                <script>
-                    d3.wordcloud("#wordcloud2")
-                        .size([500, 300])
-                        .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
-                        .words(words2)
-                        .start();
-                </script>
+                    <div id='wordcloud2' class="wordCloud" style="display: none">
+                        <p class="wordCloudLabel">Even more text here.</p>
+                    </div>
 
+                    <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
+                    <script>
+                        d3.wordcloud("#wordcloud2")
+                            .size([1000, 300])
+                            .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+                            .words(words2)
+                            .start();
+                    </script>
+
+                </div>
+            </div>
+            <hr>
+
+
+            <div id="stats">
+                <h1>#Stats</h1>
+                <p class="lead">Include our experimental results in table form</p>
+                Target audience here is more technical folks.
             </div>
             <hr>
 
             <div id="more">
                 <h1>#More</h1>
                 <p class="lead">Include our Github, names, contact?</p>
-                <p>More info will go here.</p>
+                <ul>
+                    <li>We are <a href="http://eateggs.com/" target="_blank">Mark Egge</a>,
+                        <a href="http://emilieyao.com" target="_blank">Emilie Yao</a>, and
+                        <a href="http://stefanhermanek.com" target="_blank">Stefan Hermanek</a>.
+                        Over the course of a warm June weekend, we decided to use data for good.</li>
+                    <li>Found a bug? Report it <a href="https://github.com/markegge/monument-comments/issues" target="_blank">via GitHub.</a></li>
+                    <li>Want to get in touch? <a href="mailto:CHANGE@CHANGE.com?Subject=CHANGE SUBJECT" target="_blank">Email us!</a></li>
+                </ul>
             </div>
             <hr>
 
