@@ -197,7 +197,7 @@
   }
 
   function cloudFont() {
-    //Changed this to have sans-serif.
+    //Changed this to sans-serif. SH
     return "sans-serif";
   }
 
