@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>National Monuments Public Comments Project</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -380,6 +380,7 @@
 
 
 
+                <hr>
 
 
                 <p class="lead">Wicked Word Clouds</p>
@@ -409,7 +410,7 @@
                 <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
                 <script>
                     d3.wordcloud("#wordcloud1")
-                        .size([500, 300])
+                        .size([1000, 300]) // Let's set the parameter of width later!
                         .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
                         .words(words1)
                         .start();

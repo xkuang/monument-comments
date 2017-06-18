@@ -46,3 +46,8 @@ body {
 {
     margin: auto;
 }
+
+.wordCloud
+{
+    text-align: center;
+}
