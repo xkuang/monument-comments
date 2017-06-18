@@ -23,9 +23,16 @@
     <![endif]-->
 
 
+    <!--Charts.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0-rc.1/Chart.bundle.js"></script>
-    <!--<script src="./node_modules/chart.js/dist/Chart.bundle.js"></script>-->
-    <!--<script src="./node_modules/chart.js/dist/utils.js"></script>-->
+
+    <!--Word cloud w/ D3JS via https://github.com/wvengen/d3-wordcloud/-->
+    <script src="js/d3.js" charset="utf-8"></script>
+    <script src="js/d3.layout.cloud.js"></script>
+    <script src="js/d3.wordcloud.js"></script>
+    <script src="js/example.words.js"></script>
+
+
 
     <script>
         /* global Chart */
@@ -373,6 +380,51 @@
 
 
 
+
+
+                <p class="lead">Wicked Word Clouds</p>
+                <p><a onClick="showWordCloud(1)">Word Cloud 1</a> | <a onClick="showWordCloud(2)">Word Cloud 2</a></p>
+
+                <script>
+                    var showWordCloud = function(toShow)
+                    {
+                        let allClouds = document.getElementsByClassName("wordCloud");
+                        for (let i = 0; i < allClouds.length; i++)
+                        {
+                            if (i === (toShow-1))
+                            {
+                                allClouds[i].style.display = 'inherit';
+                            }
+                            else
+                            {
+                                allClouds[i].style.display = 'none';
+                            }
+                        }
+                    }
+                </script>
+
+
+
+                <div id='wordcloud1' class="wordCloud"></div>
+                <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
+                <script>
+                    d3.wordcloud("#wordcloud1")
+                        .size([500, 300])
+                        .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+                        .words(words1)
+                        .start();
+                </script>
+
+
+                <div id='wordcloud2' class="wordCloud" style="display: none"></div>
+                <!--<p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>-->
+                <script>
+                    d3.wordcloud("#wordcloud2")
+                        .size([500, 300])
+                        .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+                        .words(words2)
+                        .start();
+                </script>
 
             </div>
             <hr>
