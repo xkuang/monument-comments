@@ -4,7 +4,7 @@
     <list default="true" id="b37fa794-d01a-40cc-85c5-d5238a40d2b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/d3.layout.cloud.js" afterPath="$PROJECT_DIR$/js/d3.layout.cloud.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/example.words.js" afterPath="$PROJECT_DIR$/js/example.words.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,13 +25,14 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="279" column="21" lean-forward="false" selection-start-line="279" selection-start-column="21" selection-end-line="279" selection-end-column="21" />
+            <state relative-caret-position="315">
+              <caret line="355" column="40" lean-forward="true" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
               <folding>
-                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,9 +41,14 @@
       <file leaf-file-name="example.words.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/example.words.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="345">
+              <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="24" />
+              <folding>
+                <element signature="e#517#2397#0" expanded="false" />
+                <element signature="e#2427#4312#0" expanded="false" />
+                <element signature="e#4333#5979#0" expanded="false" />
+                <element signature="e#6009#7778#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +80,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="564">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,9 +102,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/example.words.js" />
         <option value="$PROJECT_DIR$/js/d3.wordcloud.js" />
         <option value="$PROJECT_DIR$/js/d3.layout.cloud.js" />
+        <option value="$PROJECT_DIR$/js/example.words.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
@@ -205,7 +211,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="cloudFont&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="chartColors&#9;null&#9;null&#10;cloudFont&#9;null&#9;null" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -282,12 +288,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497811157826</updated>
       <workItem from="1497811159745" duration="3162000" />
-      <workItem from="1497816300508" duration="7866000" />
+      <workItem from="1497816300508" duration="10374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11028000" />
+    <option name="totallyTimeSpent" value="13536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="103" y="0" width="1537" height="1000" extended-state="0" />
@@ -322,6 +328,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/d3.layout.cloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="199" column="36" lean-forward="false" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/d3.wordcloud.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1494">
@@ -334,39 +350,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        <state relative-caret-position="564">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/d3.layout.cloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="199" column="36" lean-forward="false" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/example.words.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="24" />
+          <folding>
+            <element signature="e#517#2397#0" expanded="false" />
+            <element signature="e#2427#4312#0" expanded="false" />
+            <element signature="e#4333#5979#0" expanded="false" />
+            <element signature="e#6009#7778#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="279" column="21" lean-forward="false" selection-start-line="279" selection-start-column="21" selection-end-line="279" selection-end-column="21" />
+        <state relative-caret-position="315">
+          <caret line="355" column="40" lean-forward="true" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
           <folding>
-            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
