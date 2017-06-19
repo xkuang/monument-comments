@@ -37,12 +37,12 @@ body {
     margin: auto;
 }
 
-#sentimentBarChartCanvas
+#sentimentBarChartCanvas, #freqWeightBarChartCanvas
 {
     margin: auto;
 }
 
-#sentimentBarChart
+#sentimentBarChart, #freqWeightBarChart
 {
     margin: auto;
 }
