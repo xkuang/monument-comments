@@ -1,0 +1,124 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+p {
+  font-family: 'Crimson Text', Georgia, "Bitstream Charter", serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding-top: 480px;
+}
+header {
+  height: 450px;
+  padding: 50px 125px;
+  background-color: #2A0404;
+  color: #FDFDFD;
+}
+header a {
+  color: #4A90E2;
+}
+
+.main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 150;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.main {
+  background: #f2f2e8;
+  padding: 130px 50px 50px;
+}
+
+
+.comment p {
+  white-space: pre-wrap;
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px #888 solid;
+}
+
+code {
+  font-size: 80%;
+}
+
+.selected {
+  background-color: #bbb;
+}
+
+#entitylist ul
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#entitytype a
+{
+  font-size: 15pt;
+  font-weight: heavy;
+}
+
+.entities ul li { display: inline; }
+
+.entities ul li a
+{
+  font-size: 10pt;
+  text-decoration: none;
+  padding: .2em 1em;
+
+}
+
+.entities ul li a:hover
+{
+  background-color: #777;
+    cursor: pointer;
+}

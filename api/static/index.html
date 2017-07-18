@@ -1,0 +1,206 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sticky Footer Navbar Template for Bootstrap</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="static/css/custom.css">
+
+  </head>
+
+  <body>
+
+  <header>
+    <div class="col-md-12" id="filters">
+        <p>At Sec. Zinke's invitation, the American public gave its opinion regarding America's national monuments under review. <strong>Here is what it had to say.</strong></p>
+
+    </div>
+  </header>
+
+    <!-- Begin page content -->
+    <nav class="main-nav">
+    <div class="container">
+    <div class="row">
+       <div class="col-md-1"></div>      
+      <div class="col-md-3">
+      	<h3>Sentiment</h3>
+      	<a href="#">Support</a>
+      	/
+      	<a href="#">Oppose</a>
+      </div>
+       <div  class="col-md-3">               
+      	<h3>Text Source</h3>
+      	<a href="#">Hand Written</a>
+      	/
+      	<a href="#">Template</a>
+      </div>
+      <div class="col-md-2">               
+          Sort By: <select>
+            <option>Date (A–Z)</option>
+            <option>Date (Z–A)</option>
+            <option>TF/IDF Score</option>
+          </select>
+      </div>
+      <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+       <div class="col-md-1"></div>     
+     </div>
+     </div>
+     </nav>         
+
+     <div class="main container">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="comments">
+                <p>Nothing selected. Please activate one or more comments above or click <a href="#">here</a> to view all comments</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- Page Content Scripts -->
+    <script>
+    $.getJSON( "/entities.json", function( data ) {
+			  var items = [];
+			  $.each( data, function( key, val ) {
+			    items.push( 
+			    	'<li class="entitytype" id="' + key + '">' +
+			    	'<a data-toggle="collapse" href="#collapse' + key + '" aria-expanded="false" aria-controls="collapse' + key + '">' +
+			    	val['name'] + 
+			    	"<span class=badge>" + val['count'] + "</span>" +
+			    	"</a>"  + 
+			    	'<div class="collapse entities" id="collapse' + key + '">' +
+			    	'<ul>'
+			    );
+
+			  	$.each( val['values'], function( i, item ) {
+			  		items.push( 
+			  			"<li id='" + item['id'] + "'><a href='#'>" + item['name'] +
+			  			"(" + item['count'] + ")</a></li>"
+			    		 
+			    	);
+			  	});
+
+			  	items.push('</ul>');
+				items.push('</div>');
+				items.push('</li>');
+			  });
+		 
+			$( "<ul/>", {
+				"class": "entities",
+				html: items.join( "" )
+				}
+			).appendTo( "#filters" );
+		    
+		    $( ".entities ul li a" ).on('click', function() {
+	    		$( this ).parent().toggleClass( "selected" );
+	    		getComments();
+	    		return false;
+	    	});
+		
+		}
+
+	);
+
+	var tmp_data;
+    function getComments() {
+
+    	var params = {
+    		"entityTypes": []
+    	};
+
+    	$( "li.entitytype" ).each(function(index) {
+    		var et = { 
+    			"type": $( this ).attr('id'),
+    			"entityIds" : []
+    		};
+
+    		$( this ).find( ".selected").each(function(i) {
+    			et['entityIds'].push($( this ).attr('id'));
+    		});
+
+    		if(et['entityIds'].length > 0) {
+    			params['entityTypes'].push(et);
+    		}
+    	});
+    	
+    	$.ajax({
+    		type: "POST",
+    		dataType: "json",
+    		contentType: "application/json; charset=utf-8",
+    		url: "/documents.json", 
+    		data: JSON.stringify(params),
+    	}).done(function( data ) {
+    		tmp_data = data;
+    		setComments(data);
+    	});
+
+    }
+
+    function setComments(data) {
+    	const Item = ({ document_id, posted_date, comment_text }) => `
+		  <div id="${document_id}" class="comment">
+			  <h3>${document_id}</h3>
+			  <span class="posteddate">${posted_date}</span>
+			  <p>${comment_text}</p>
+		  </div>
+		`;
+		$( "#comments" ).html(
+			data.map(Item).join('')
+		);
+
+    }
+
+    var  mn = $(".main-nav");
+        mns = "main-nav-scrolled";
+        hdr = $('header').height();
+
+    $(window).scroll(function() {
+      if( $(this).scrollTop() > hdr ) {
+        mn.addClass(mns);
+      } else {
+        mn.removeClass(mns);
+      }
+    });
+
+    /*
+    curl -H "Content-Type: application/json" -X GET -d '{ "entityTypes" : [
+        {
+            "type": "person",
+            "entityIds": [56, 180]
+        }
+    ],
+    "offset": 50
+}' localhost:5000/documents/ 
+    */
+    </script>
+  </body>
+</html>
